@@ -1,0 +1,283 @@
+/* Remove default spacing */
+body {
+  margin: 0;
+  overflow: hidden;
+  
+}
+
+/* Fullscreen background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This stretches correctly */
+  z-index: -1;
+}
+
+/* Center vertical rectangle */
+.main-panel {
+
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 550px;
+  height: 840px;
+
+  /* Background image */
+  background-image: url("panel-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Inner yellow border using outline approach */
+  outline: 10px solid rgb(255, 232, 189); /* stays inside visually */
+  outline-offset: -10px;      /* moves outline inside panel dimensions */
+
+  border-radius: 0;
+
+overflow-y: scroll;  /* still scrollable */
+  scrollbar-width: thin;       /* for Firefox */
+  scrollbar-color: rgba(255,232,189,0.8) rgba(0,0,0,0); /* thumb track */
+
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+
+
+
+}
+
+#banner {
+  display: block;
+  margin: px auto 0 auto;  /* top margin only, centers horizontally */
+  max-width: 100%;            /* smaller so it fits nicely */
+  height: auto;              /* keeps aspect ratio */
+  object-fit: contain;       /* ensures image scales correctly */
+
+    position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+
+}
+
+#star {
+  position: absolute;
+  left: 260px;   /* same horizontal offset as spinner */
+  top: 210px;    /* same vertical offset as spinner */
+  width: 300px;   /* size of star */
+ 
+  opacity: 0.65;  /* make it semi-transparent */
+  z-index: 1;    /* behind spinner */
+  animation: spin-fast 1.5s linear infinite; /* rotates continuously */
+}
+
+/* Keyframes for rotation */
+@keyframes spin-fast {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#spinner {
+ position: absolute;
+  left: 270px;  /* horizontal offset from top-left of panel */
+  top: 200px;   /* vertical offset from top-left of panel */
+  width: 280px;  /* adjust size of spinner */
+  height: auto;
+  z-index: 2
+}
+
+#aboutme {
+ position: absolute;
+  left: 10px;  /* horizontal offset from top-left of panel */
+  top: 230px;   /* vertical offset from top-left of panel */
+  width: 300px;  /* adjust size of spinner */
+  height: auto;
+  z-index: 2
+}
+
+#dni {
+ position: absolute;
+  left: 10px;  /* horizontal offset from top-left of panel */
+  top: 411px;   /* vertical offset from top-left of panel */
+  width: 300px;  /* adjust size of spinner */
+  height: auto;
+  z-index: 1
+}
+
+#gallery1 {
+ position: absolute;
+  left: 10px;  /* horizontal offset from top-left of panel */
+  top: 488px;   /* vertical offset from top-left of panel */
+  width: 530px;  /* adjust size of spinner */
+  height: auto;
+  z-index: 1
+}
+
+#tetohate {
+ position: absolute;
+  left: 10px;  /* horizontal offset from top-left of panel */
+  top: 750px;   /* vertical offset from top-left of panel */
+  width: 530px;  /* adjust size of spinner */
+  height: auto;
+  height: 78px;
+  z-index: 1
+}
+
+
+
+
+
+#musicbanner {
+ position: absolute;
+  left: 10px;  /* horizontal offset from top-left of panel */
+  top: 826px;   /* vertical offset from top-left of panel */
+  width: 530px;  /* adjust size of spinner */
+  height: auto;
+  height: 150px;
+  z-index: 1;
+  filter: brightness(1.17); /* slightly dim the music banner */
+}
+
+#musicbg {
+ position: absolute;
+  left: 10px;  /* horizontal offset from top-left of panel */
+  top: 976px;   /* vertical offset from top-left of panel */
+  width: 530px;  /* adjust size of spinner */
+  height: auto;
+  height: 550px;
+  z-index: 1;
+  filter: brightness(1.1); /* slightly dim the music banner */
+}
+
+#musics {
+ position: absolute;
+  left: 10px;  /* horizontal offset from top-left of panel */
+  top: 995px;   /* vertical offset from top-left of panel */
+  width: 260px;  /* adjust size of spinner */
+  height: auto;
+  height: 500px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#flopera {
+ position: absolute;
+  right: 0px;  /* horizontal offset from top-left of panel */
+  top: 970px;   /* vertical offset from top-left of panel */
+  width: 500px;  /* adjust size of spinner */
+  height: auto;
+  height: 200px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#flopera:hover {
+  filter: brightness(1.2); /* brighten on hover */
+  cursor: pointer; /* show pointer cursor on hover */
+}
+
+#triplebaka {
+ position: absolute;
+  right: 0px;  /* horizontal offset from top-left of panel */
+  top: 1160px;   /* vertical offset from top-left of panel */
+  width: 500px;  /* adjust size of spinner */
+  height: auto;
+  height: 200px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#triplebaka:hover {
+  filter: brightness(1.1); /* brighten on hover */
+  cursor: pointer; /* show pointer cursor on hover */
+}
+
+#nag {
+ position: absolute;
+  right: 0px;  /* horizontal offset from top-left of panel */
+  top: 1340px;   /* vertical offset from top-left of panel */
+  width: 500px;  /* adjust size of spinner */
+  height: auto;
+  height: 200px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#nag:hover {
+  filter: brightness(1.1); /* brighten on hover */
+  cursor: pointer; /* show pointer cursor on hover */
+}
+
+#moretxt {
+ position: absolute;
+  right: 15px;  /* horizontal offset from top-left of panel */
+  top: 1530px;   /* vertical offset from top-left of panel */
+  width: 500px;  /* adjust size of spinner */
+  height: auto;
+  height: 300px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#friends {
+ position: absolute;
+  left: 25px;  /* horizontal offset from top-left of panel */
+  top: 1830px;   /* vertical offset from top-left of panel */
+  width: 300px;  /* adjust size of spinner */
+  height: auto;
+  height: 300px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#likes {
+ position: absolute;
+  right: 15px;  /* horizontal offset from top-left of panel */
+  top: 1830px;   /* vertical offset from top-left of panel */
+  width: 200px;  /* adjust size of spinner */
+  height: auto;
+  height: 300px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#dislikes {
+ position: absolute;
+  right: 15px;  /* horizontal offset from top-left of panel */
+  top: 2130px;   /* vertical offset from top-left of panel */
+  width: 500px;  /* adjust size of spinner */
+  height: auto;
+  height: 300px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#gallery2 {
+ position: absolute;
+  right: 95px;  /* horizontal offset from top-left of panel */
+  top: 2430px;   /* vertical offset from top-left of panel */
+  width: 350px;  /* adjust size of spinner */
+  height: auto;
+  height: 550px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
+
+#ending {
+ position: absolute;
+  right: 0px;  /* horizontal offset from top-left of panel */
+  top: 3000px;   /* vertical offset from top-left of panel */
+  width: 520px;  /* adjust size of spinner */
+  height: auto;
+  height: 330px;
+  z-index: 1;
+  filter: brightness(1); /* slightly dim the music banner */
+}
