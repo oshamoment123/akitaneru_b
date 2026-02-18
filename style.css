@@ -49,7 +49,7 @@ overflow-y: scroll;  /* still scrollable */
   padding-bottom: 20px;
   box-sizing: border-box;
 
-
+  transform: translate(-50%, -50%);
 
 }
 
@@ -280,4 +280,12 @@ overflow-y: scroll;  /* still scrollable */
   height: 330px;
   z-index: 1;
   filter: brightness(1); /* slightly dim the music banner */
+}
+
+/* Mobile scaling */
+@media (max-width: 600px) {
+  .main-panel {
+    transform: translate(-50%, -50%) scale(0.5); /* scales to 50% */
+    transform-origin: top left; /* scale from top-left corner */
+  }
 }
