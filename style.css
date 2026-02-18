@@ -16,6 +16,15 @@ body {
   z-index: -1;
 }
 
+.panel-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 /* Center vertical rectangle */
 .main-panel {
 
@@ -23,7 +32,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   
   width: 550px;
   height: 840px;
@@ -49,7 +58,8 @@ overflow-y: scroll;  /* still scrollable */
   padding-bottom: 20px;
   box-sizing: border-box;
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1); /* default desktop */
+  transform-origin: center center;           /* center scaling */
 
 }
 
