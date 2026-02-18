@@ -20,8 +20,8 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
   overflow: hidden;
 }
 
@@ -295,7 +295,7 @@ overflow-y: scroll;  /* still scrollable */
 /* Mobile scaling */
 @media (max-width: 600px) {
   .main-panel {
-    transform: translate(-50%, -50%) scale(0.5); /* scales to 50% */
-    transform-origin: top left; /* scale from top-left corner */
+    transform: scale(0.5);          /* scale down for mobile */
+    transform-origin: top left;     /* scale from top-left inside wrapper */
   }
 }
